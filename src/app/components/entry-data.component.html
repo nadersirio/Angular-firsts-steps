@@ -1,0 +1,15 @@
+<input
+  type="text"
+  [value]="placeholder"
+  (input)="placeholder = $any($event.target).value"
+/>
+<!-- O $any nos permite escrever qualquer código javascript dentro dele. -->
+<p>{{placeholder}}</p>
+
+<!-- Outro método, e mais eficaz é: -->
+<input
+  type="text"
+  [(ngModel)]="placepass"
+/>
+<!-- Realizei a importação do 'FormsModule' no arquivo app.module.ts -->
+<p [style.color]="color">{{placepass}}</p>
