@@ -8,6 +8,7 @@ import { MenuComponent } from './components/menu.component';
 import { ButtonComponent } from './components/button.component';
 import { EntryDataComponent } from './components/entry-data.component';
 import { TitleComponent } from './components/title.component';
+import { CheckSampleComponent } from './check-sample/check-sample.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { TitleComponent } from './components/title.component';
     MenuComponent,
     ButtonComponent,
     EntryDataComponent,
+    CheckSampleComponent,
   ],
   imports: [
     BrowserModule,

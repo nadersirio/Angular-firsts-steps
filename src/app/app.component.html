@@ -7,6 +7,8 @@
   <body>
     <h1>OIEEE</h1>
     <app-title></app-title>
+    <app-check-sample *ngIf="isAliveCheckSample"></app-check-sample>
+    <button (click)="disposeCheckSample()">destruir</button>
     <menu-component></menu-component>
     <entry-data-component></entry-data-component>
     <button-component [label]="buttonLabel"></button-component>

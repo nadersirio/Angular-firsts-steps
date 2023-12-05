@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   buttonLabel: string = 'Botões';
+  isAliveCheckSample:boolean = true;
+
+  disposeCheckSample():void{
+    this.isAliveCheckSample = false;
+  }
 }
