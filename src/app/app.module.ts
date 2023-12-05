@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu.component';
 import { ButtonComponent } from './components/button.component';
 import { EntryDataComponent } from './components/entry-data.component';
+import { TitleComponent } from './components/title.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    TitleComponent,
     MenuComponent,
     ButtonComponent,
     EntryDataComponent,
