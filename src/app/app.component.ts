@@ -7,9 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   buttonLabel: string = 'Botões';
-  isAliveCheckSample:boolean = true;
+  isAliveCheckSample: boolean = true;
+  SampleMessage: string = 'destruir';
+  isAliveCheckEntryData: boolean = false;
+  InputsMessage: string = 'criar componentes';
 
-  disposeCheckSample():void{
-    this.isAliveCheckSample = false;
+  checkSample(): void {
+    this.isAliveCheckSample = !this.isAliveCheckSample;
+    this.SampleMessage = this.isAliveCheckSample ? 'destruir' : 'recuperar';
+  }
+
+  inputCheckSample(): void {
+    this.isAliveCheckEntryData = !this.isAliveCheckEntryData;
+    this.InputsMessage = this.isAliveCheckEntryData ? 'destruir componentes' : 'criar componentes';
   }
 }
+

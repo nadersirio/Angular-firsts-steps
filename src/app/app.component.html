@@ -7,15 +7,21 @@
   <body>
     <h1>OIEEE</h1>
     <app-title></app-title>
-    <app-check-sample *ngIf="isAliveCheckSample"></app-check-sample>
-    <button (click)="disposeCheckSample()">destruir</button>
     <menu-component></menu-component>
-    <entry-data-component></entry-data-component>
-    <button-component [label]="buttonLabel"></button-component>
+
+    <app-check-sample *ngIf="isAliveCheckSample"></app-check-sample>
+    <button (click)="checkSample()">{{SampleMessage}}</button>
+    <br>
+    <br>
+    <button (click)="inputCheckSample()">{{InputsMessage}}</button>
+    <br>
+    <br>
+    <entry-data-component *ngIf="isAliveCheckEntryData"></entry-data-component>
+    <button-component [label]="buttonLabel" *ngIf="isAliveCheckEntryData"></button-component>
 <!-- ou... -->
 <!-- <button-component label={{buttonLabel}}></button-component> -->
 
-    <button-component label="buttonLabel"></button-component>
+    <button-component label="buttonLabel" *ngIf="isAliveCheckEntryData"></button-component>
 <!-- ou... -->
 <!-- <button-component [label]="'buttonLabel'"></button-component> -->
   </body>
