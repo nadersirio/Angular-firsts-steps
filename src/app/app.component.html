@@ -16,7 +16,10 @@
     <button (click)="inputCheckSample()">{{InputsMessage}}</button>
     <br>
     <br>
-    <entry-data-component *ngIf="isAliveCheckEntryData"></entry-data-component>
+    <entry-data-component *ngIf="isAliveCheckEntryData else anotherBlock"></entry-data-component>
+    <ng-template #anotherBlock>
+      <p>Clique em "criar componentes"</p>
+    </ng-template>
     <button-component [label]="buttonLabel" *ngIf="isAliveCheckEntryData"></button-component>
 <!-- ou... -->
 <!-- <button-component label={{buttonLabel}}></button-component> -->

@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: 'app-title',
-  template: '<h1>Titulo OnInit {{ palavra }}</h1>',
+  template: '<h1>OnInit {{ palavra }}</h1>',
   styles: ['h2{color: yellow}']
 })
 
