@@ -1,0 +1,19 @@
+<h1>CRUD Inputs</h1>
+
+<input
+  type="text"
+  [placeholder]="placeholderEmail"
+  [value]="valueEmail"
+  (input)="valueEmail = $any($event.target).value"
+/>
+<!-- O $any nos permite escrever qualquer código javascript dentro dele. -->
+<p>{{valueEmail}}</p>
+
+<!-- Outro método, e mais eficaz é: -->
+<input
+  type="text"
+  [placeholder]="placeholderPassword"
+  [(ngModel)]="valuePassword"
+/>
+<!-- Realizei a importação do 'FormsModule' no arquivo app.module.ts -->
+<p [style.color]="color">{{valuePassword}}</p>

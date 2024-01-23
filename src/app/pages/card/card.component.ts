@@ -7,7 +7,10 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 })
 export class CardComponent implements OnInit, OnChanges {
   products:string[] = []
+  menuType:string = ""
+  options:string[] = ['user', 'admin', 'superUser']
   placeholder:string = "Insira um item a lista!"
+  value:string = "''"
   constructor() {
     this.products = [
       "mouse",
@@ -21,9 +24,12 @@ export class CardComponent implements OnInit, OnChanges {
   }
   ngOnInit(): void {}
   adicionar(){
-    this.products.push(this.placeholder)
+    this.products.push(this.value)
   }
   remove(){
     this.products.pop()
+  }
+  checkIndex(index: number){
+    alert(index);
   }
 }
